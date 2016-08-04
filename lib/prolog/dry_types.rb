@@ -11,3 +11,4 @@ module Types
 end
 
 require_relative './dry_types/error_array'
+require_relative './dry_types/integer_range'
