@@ -12,3 +12,4 @@ end
 
 require_relative './dry_types/error_array'
 require_relative './dry_types/integer_range'
+require_relative './dry_types/time_or_now'
