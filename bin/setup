@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# set -euo pipefail
+# IFS=$'\n\t'
+# set -vx
+
+# rm -rf .bundle Gemfile.lock
+
+bundle install --local
+
+if [[ -d $RBENV_ROOT ]]
+then
+  rbenv rehash
+fi
+
+bundle binstub --force flay flog pry rake reek rubocop
