@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'prolog/dry_types/version'
 
 Gem::Specification.new do |spec|
-  spec.name                  = "prolog-dry-types"
+  spec.name                  = "prolog-dry_types"
   spec.version               = Prolog::DryTypes::VERSION
   spec.required_ruby_version = '>= 2.3.0'
   spec.authors               = ["Jeff Dickey"]
