@@ -2,11 +2,9 @@
 
 require 'dry-types'
 
-require 'prolog/dry_types/version'
-
 # `Types` as a top-level namespace module seems to be a `dry-types` convention.
 module Types
-  include Dry::Types.module
-end
+  include Dry::Types.module # should have already been included
 
-require_relative './dry_types/error_array'
+  ErrorArray = Types::Strict::Array.member(Types::Strict::Hash)
+end
