@@ -13,9 +13,9 @@ module Types
   # reflection, this makes little sense as a general-purpose behaviour, as it is
   # highly likely to surprise casual users.
   IntegerRange = Range.constructor do |value|
-    if value.is_a?(::Range)
-      value
-    else
+    if value.respond_to?(:minmax) # Enumerable; eg, Range or Array
+      value.min..value.max
+    else # it *better* be an Integer
       0..value.to_i
     end
   end

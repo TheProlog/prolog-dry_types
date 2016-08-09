@@ -27,6 +27,11 @@ describe 'Types::IntegerRange' do
       @range = 0..42
       @obj = attribute_class.new range: 42
     end
+
+    it 'an Array of integers representing a Range' do # See Issue #1.
+      @range = init_range
+      @obj = attribute_class.new range: init_range.to_a
+    end
   end # describe 'can be initialised with'
 
   describe 'when initialised with' do
@@ -38,6 +43,12 @@ describe 'Types::IntegerRange' do
     it 'an Integer, is a Range from 0 to that value, inclusive' do
       obj = attribute_class.new range: top_end
       expect(obj.range).must_equal 0..top_end
+    end
+
+    # See Issue #1.
+    it 'an Array of integers, is a Range spanning the values in that Array' do
+      obj = attribute_class.new range: init_range.to_a
+      expect(obj.range).must_equal init_range
     end
   end # describe 'when initialised with'
 end
