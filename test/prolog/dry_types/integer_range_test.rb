@@ -2,11 +2,12 @@
 
 require 'test_helper'
 
+require 'prolog/dry_types/setup'
 require 'prolog/dry_types/integer_range'
 
 describe 'Types::IntegerRange' do
   let(:attribute_class) do
-    Class.new(Dry::Types::Value) do
+    Class.new(Dry::Struct::Value) do
       attribute :range, Types::IntegerRange
     end
   end
