@@ -2,6 +2,7 @@
 
 require 'test_helper'
 
+require 'prolog/dry_types/setup'
 require 'prolog/dry_types/range'
 
 # Cnntainer namespace for use with Dry::Types. This *must* be defined *after*
@@ -12,13 +13,13 @@ end
 
 describe 'Types::Range' do
   let(:attribute_class) do
-    Class.new(Dry::Types::Value) do
+    Class.new(Dry::Struct::Value) do
       attribute :range, Types::Range
     end
   end
   let(:source_range) { 0..20 }
   let(:strict_attribute_class) do
-    Class.new(Dry::Types::Value) do
+    Class.new(Dry::Struct::Value) do
       attribute :range, Types::Strict::Range
     end
   end

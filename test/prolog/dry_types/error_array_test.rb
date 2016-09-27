@@ -2,11 +2,12 @@
 
 require 'test_helper'
 
+require 'prolog/dry_types/setup'
 require 'prolog/dry_types/error_array'
 
 describe 'Types::ErrorArray' do
   let(:attribute_class) do
-    Class.new(Dry::Types::Value) do
+    Class.new(Dry::Struct::Value) do
       attribute :errors, Types::ErrorArray
     end
   end

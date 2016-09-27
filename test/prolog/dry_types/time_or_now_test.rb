@@ -2,11 +2,12 @@
 
 require 'test_helper'
 
+require 'prolog/dry_types/setup'
 require 'prolog/dry_types/time_or_now'
 
 describe 'Types::TimeOrNow' do
   let(:attribute_class) do
-    Class.new(Dry::Types::Value) do
+    Class.new(Dry::Struct::Value) do
       attribute :torn, Types::TimeOrNow
     end
   end
@@ -21,7 +22,7 @@ describe 'Types::TimeOrNow' do
 
     it 'nil to use the current time' do # with some wiggle room for testing
       Time.stub :now, dummy_time do
-        @obj = attribute_class.new torn: nil
+        @obj = attribute_class.new
       end
     end
 
@@ -31,7 +32,7 @@ describe 'Types::TimeOrNow' do
   end # describe 'supports initialisation with'
 
   describe 'does not support initialisation with' do
-    let(:error_class) { Dry::Types::StructError }
+    let(:error_class) { Dry::Struct::Error }
 
     after do
       expect { attribute_class.new torn: @stamp }.must_raise error_class
