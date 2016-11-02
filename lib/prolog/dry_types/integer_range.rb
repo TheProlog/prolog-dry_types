@@ -1,13 +1,10 @@
 # frozen_string_literal: true
 
 require 'dry-types'
-
-require_relative './range'
+require 'prolog/dry_types/include_module'
 
 # `Types` as a top-level namespace module seems to be a `dry-types` convention.
 module Types
-  include Dry::Types.module # should have already been included
-
   # The original version of this type treated initialisation with an integer
   # value of zero as invalid, setting the initialised range to (-1..-1). On
   # reflection, this makes little sense as a general-purpose behaviour, as it is

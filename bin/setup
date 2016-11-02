@@ -3,7 +3,29 @@
 # IFS=$'\n\t'
 # set -vx
 
-# rm -rf .bundle Gemfile.lock
+rm -rf gemset/ .rbenv-gemsets Gemfile.lock
+
+rbenv gemset init './gemset'
+gem install dry-types -v 0.9.0
+gem install dry-struct -v 0.1.0
+gem install uuid -v 2.3.8
+
+gem install bundler -v 1.13.6
+gem install rake -v 11.3.0
+gem install minitest -v 5.9.1
+
+gem install minitest-matchers -v 1.4.1
+gem install minitest-reporters -v 1.1.12
+gem install minitest-tagz -v 1.5.2
+
+gem install flay -v 2.8.1
+gem install flog -v 4.4.0
+gem install reek -v 4.5.1
+gem install rubocop -v 0.45.0
+gem install simplecov -v 0.12.0
+gem install pry-byebug -v 3.4.0
+gem install pry-doc -v 0.9.0
+gem install awesome_print -v 1.7.0
 
 bundle install --local
 
