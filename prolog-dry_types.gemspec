@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.summary               = %q{Dry::Types typedefs found to be generally useful. Replaces deprecated prolog-dry-types.}
   # spec.description         = %q{TODO: Write a longer description or delete this line.}
   spec.homepage              = "https://github.com/TheProlog/prolog-dry_types"
+  spec.metadata["yard.run"] = "yri" # use "yard" to build full HTML docs.
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -28,8 +29,8 @@ Gem::Specification.new do |spec|
   spec.executables           = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths         = ["lib"]
 
-  spec.add_dependency "dry-struct", "0.1.0"
-  spec.add_dependency "dry-types", "0.9.0"
+  spec.add_dependency "dry-struct", "0.1.1"
+  spec.add_dependency "dry-types", "0.9.2"
   spec.add_dependency "uuid", "2.3.8"
 
   spec.add_development_dependency "bundler", "1.13.6"
@@ -43,9 +44,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "awesome_print", "1.7.0"
   spec.add_development_dependency "flay", "2.8.1"
   spec.add_development_dependency "flog", "4.4.0"
-  spec.add_development_dependency "reek", "4.5.1"
-  spec.add_development_dependency "rubocop", "0.45.0"
+  spec.add_development_dependency "reek", "4.5.2"
+  spec.add_development_dependency "rubocop", "0.46.0"
   spec.add_development_dependency "simplecov", "0.12.0"
-  spec.add_development_dependency "pry-byebug", "3.4.0"
+  spec.add_development_dependency "pry-byebug", "3.4.1"
   spec.add_development_dependency "pry-doc", "0.9.0"
 end
