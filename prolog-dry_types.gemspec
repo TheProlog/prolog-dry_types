@@ -30,15 +30,15 @@ Gem::Specification.new do |spec|
   spec.require_paths         = ["lib"]
 
   spec.add_dependency "dry-struct", "0.1.1"
-  spec.add_dependency "dry-types", "0.9.2"
+  spec.add_dependency "dry-types", "0.9.3"
   spec.add_dependency "uuid", "2.3.8"
 
   spec.add_development_dependency "bundler", "1.13.6"
   spec.add_development_dependency "rake", "11.3.0"
-  spec.add_development_dependency "minitest", "5.9.1"
+  spec.add_development_dependency "minitest", "5.10.1"
 
   spec.add_development_dependency "minitest-matchers", "1.4.1"
-  spec.add_development_dependency "minitest-reporters", "1.1.12"
+  spec.add_development_dependency "minitest-reporters", "1.1.13"
   spec.add_development_dependency "minitest-tagz", "1.5.2"
 
   spec.add_development_dependency "awesome_print", "1.7.0"

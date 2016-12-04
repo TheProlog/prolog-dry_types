@@ -6,16 +6,16 @@
 rm -rf gemset/ .rbenv-gemsets Gemfile.lock
 
 rbenv gemset init './gemset'
-gem install dry-types -v 0.9.2
+gem install dry-types -v 0.9.3
 gem install dry-struct -v 0.1.1
 gem install uuid -v 2.3.8
 
 gem install bundler -v 1.13.6
 gem install rake -v 11.3.0
-gem install minitest -v 5.9.1
+gem install minitest -v 5.10.1
 
 gem install minitest-matchers -v 1.4.1
-gem install minitest-reporters -v 1.1.12
+gem install minitest-reporters -v 1.1.13
 gem install minitest-tagz -v 1.5.2
 
 gem install flay -v 2.8.1
