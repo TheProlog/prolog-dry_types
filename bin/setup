@@ -6,25 +6,26 @@
 rm -rf gemset/ .rbenv-gemsets Gemfile.lock
 
 rbenv gemset init './gemset'
-gem install dry-types -v 0.9.3
-gem install dry-struct -v 0.1.1
+gem install dry-types -v 0.9.4
+gem install dry-struct -v 0.2.1
 gem install uuid -v 2.3.8
 
-gem install bundler -v 1.13.6
-gem install rake -v 11.3.0
+gem install bundler -v 1.14.6
+gem install rake -v 12.0.0
+# gem install rake -v 11.3.0
 gem install minitest -v 5.10.1
 
 gem install minitest-matchers -v 1.4.1
-gem install minitest-reporters -v 1.1.13
+gem install minitest-reporters -v 1.1.14
 gem install minitest-tagz -v 1.5.2
 
 gem install flay -v 2.8.1
-gem install flog -v 4.4.0
-gem install reek -v 4.5.2
-gem install rubocop -v 0.46.0
-gem install simplecov -v 0.12.0
-gem install pry-byebug -v 3.4.1
-gem install pry-doc -v 0.9.0
+gem install flog -v 4.6.1
+gem install reek -v 4.5.6
+gem install rubocop -v 0.47.1
+gem install simplecov -v 0.13.0
+gem install pry-byebug -v 3.4.2
+gem install pry-doc -v 0.10.0
 gem install awesome_print -v 1.7.0
 rbenv rehash
 

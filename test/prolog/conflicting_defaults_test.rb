@@ -16,7 +16,8 @@ describe 'Testing' do
     let(:obj) { demo_class.new }
 
     it 'work when no non-default attributes are specified' do
-      expect { obj }.must_be_silent
+      actual = [:id1, :id2].map { |attr| obj.respond_to?(attr) }.uniq
+      expect(actual).must_equal [true]
     end
 
     it 'fail when explicit values specified for some but not all attributes' do
