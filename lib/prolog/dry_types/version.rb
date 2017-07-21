@@ -3,6 +3,6 @@
 module Prolog
   # Container for RubyGems-required constant definitions.
   module DryTypes
-    VERSION = '0.3.3'
+    VERSION = '0.3.4'
   end
 end
